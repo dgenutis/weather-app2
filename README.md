@@ -1,3 +1,3 @@
-Weather App, not finished -------->
+Weather App, not finished
 
------->   https://dgenutis-weather-app.netlify.app/
+  https://dgenutis-weather-app.netlify.app/
