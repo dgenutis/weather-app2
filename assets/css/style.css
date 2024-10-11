@@ -174,7 +174,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--white-alpha-8);
-  border-radius:  var (--radius-pill);
+  border-radius:  var(--radius-pill);
 }
 
 
@@ -257,8 +257,8 @@ body {
 }
 
 .btn-primary {
-  background-color: var (--primary);
-  color:  var (--on-primary);
+  background-color: var(--primary);
+  color:  var(--on-primary);
   height: 48px;
   line-height: 48px;
   max-width: max-content;
@@ -531,8 +531,24 @@ article.container::before {
   #HIGHLIGHTS
 \*-----------------------------------*/
 
+.forecast-card .title-2 { margin-block-end: 0;}
 
+.forecast-card :is(.card-item, .icon-wrapper) {
+  display: flex;
+  align-items: center;
+}
 
+.forecast-card .card-item:not(:last-child) { margin-block-end: 12px;}
+
+.forecast-card .label-1 {
+  color: var(--on-surface-variant);
+  font-weight: var(--weight-semiBold);
+}
+
+.forecast-card .card-item > .label-1 {
+  width: 100%;
+  text-align: right;
+}
 
 
 /*-----------------------------------*\
