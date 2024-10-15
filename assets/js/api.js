@@ -8,7 +8,7 @@
 
 'use strict';
 
-const api_url = "bc6340660c601debbabce712acabba9b";
+const api_key = "bc6340660c601debbabce712acabba9b";
 
 /**
  * @param {string} URL API url
