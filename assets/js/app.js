@@ -18,7 +18,7 @@ import * as module from "./module.js"
  * @param {string} eventType Event Type e.g. 'click', 'mouseover'
  * @param {Function} callback Callback function
  */
-const addEventListener = function (elements, eventType, callback) {
+const addEventOnElements = function (elements, eventType, callback) {
     for (const element of elements) element.addEventListener(eventType, callback);
 }
 
@@ -30,7 +30,7 @@ const searchView = document.querySelector("[data-search-view]");
 const searchTogglers = document.querySelectorAll("[data-search-toggler]");
 
 const toggleSearch = () => searchView.classList.toggle("active");
-    addEventListener(searchTogglers, 'click', toggleSearch);
+addEventOnElements(searchTogglers, 'click', toggleSearch);
 
 /**
  * SEARCH INTEGRATION  
@@ -82,8 +82,8 @@ searchField.addEventListener("input", function () {
                     items.push(searchItem.querySelector("[data-search-toggler]"));
                 }
                 
-                addEventOnElements(items, "click", function (){
-                    toggleSearch()
+                addEventOnElements(items, "click", function () {
+                    toggleSearch();
                     searchResult.classList.remove("active");
                 });
             });
@@ -107,7 +107,7 @@ export const updateWeather = function (lat, lon) {
 
     // loading.style.display = "grid";
     container.style.overflowY = "hidden";
-    // container.classList.contains("fade-in")
+    // container.classList.remove("fade-in")
     errorContent.style.display = "none";
 
     const currentWeatherSection = document.querySelector("[data-current-weather]");
